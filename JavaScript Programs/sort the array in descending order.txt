@@ -1,0 +1,22 @@
+// Taking input from the user
+var inputString = prompt("Enter numbers separated by commas:");
+
+// Splitting the input string into an array of substrings using commas as separators
+var numberStrings = inputString.split(",");
+
+// Converting the array of number strings to an array of integers
+var numbers = [];
+for (var i = 0; i < numberStrings.length; i++) {
+    var num = parseInt(numberStrings[i].trim());
+    if (!isNaN(num)) {
+        numbers.push(num);
+    }
+}
+
+// Sorting the array in descending order
+numbers.sort(function(a, b) {
+    return b - a;
+});
+
+// Displaying the sorted array
+console.log("Sorted Array in Descending Order: " + numbers);

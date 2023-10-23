@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(159, 159, 197, 0.716);
+ 
+}
+
+.form-container {
+    text-align: left;
+    background-color: wheat;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    margin-right: 30px;
+    border-radius: 20px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.buttons button {
+    margin-right: 10px;
+    font-size: 20px; /* To increase font size of buttons*/
+}
+
+
+    .display-group {
+        display: inline-block;
+        margin-right: 20px; /* add margins between them to place side by side  */
+    }

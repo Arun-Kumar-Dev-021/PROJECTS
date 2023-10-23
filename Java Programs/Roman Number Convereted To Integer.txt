@@ -1,0 +1,80 @@
+public class Main {
+
+
+ public static double romanToInt(String s){
+
+  char[] sArr=s.toCharArray();
+    int length=s.length();
+    int decimalNum=0;
+
+    for(int i=length-1;i>-1;i--){
+        
+        if( i-1 >-1 && sArr[i]=='V' && sArr[i-1]=='I' )
+        {
+            decimalNum+=4;
+            i--;
+            continue;
+        }
+        else if( i-1 >-1 && sArr[i]=='X' && sArr[i-1]=='I' )
+        {
+            decimalNum+=9;
+            i--;continue;
+        }
+        else if( i-1 >-1 && sArr[i]=='L' && sArr[i-1]=='X' )
+        {
+            decimalNum+=40;
+            i--;continue;
+        }
+        else if( i-1 >-1 && sArr[i]=='C' && sArr[i-1]=='X' )
+        {
+            decimalNum+=90;
+            i--;continue;
+        }
+        else if( i-1 >-1 && sArr[i]=='D' && sArr[i-1]=='C' )
+        {
+            decimalNum+=400;
+            i--;continue;
+        }
+        else if( i-1 >-1 && sArr[i]=='M' && sArr[i-1]=='C' )
+        {
+            decimalNum+=900;
+            i--;continue;
+        }
+        
+        
+       if(i>-1){
+           
+           if(sArr[i]=='I'){
+               decimalNum+=1;
+           }else if(sArr[i]=='V'){
+               decimalNum+=5;
+           }else if(sArr[i]=='X'){
+               decimalNum+=10;
+           }else if(sArr[i]=='L'){
+               decimalNum+=50;
+           }else if(sArr[i]=='C'){
+               decimalNum+=100;
+           }else if(sArr[i]=='D'){
+               decimalNum+=500;
+           }
+           else{
+               decimalNum+=1000;
+           }
+        
+          
+        }
+       
+        
+     }
+return decimalNum;
+
+}
+
+public static void main(String[] args){
+
+String D="V";
+double result=romanToInt(D);
+System.out.println(result);
+
+}
+}
